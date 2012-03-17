@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<title>Retina test</title>
+<title>Retina tests</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body{text-align: center; font-family: georgia, serif; padding: 0; margin: 2em 0;}
+body{text-align: center; font-family: georgia, serif; padding: 0; margin: 2em 0;-webkit-text-size-adjust: none}
 figure{margin: 2em 0 0; display: inline-block; width: 300px; vertical-align: top;}
 figcaption{color: #666; font-size: 80%;}
+aside{max-width: 72ex; text-align: left; margin: 1em;}
 </style>
-<h1>Retina test</h1>
+<h1>Retina tests</h1>
 <p>Load this page on a retina device such as iPhone 4, iPhone 4S or the new iPad.</p>
 <figure>
 	<img src="1.png" width="300" height="300">
-	<figcaption>300&times;300px image (the edges shoud look blurry)</figcaption>
+	<figcaption>1. 300&times;300px image</figcaption>
 </figure>
 <figure>
 	<img src="2.png" width="300" height="300">
-	<figcaption>600&times;600px image (the ideal case)</figcaption>
+	<figcaption>2. 600&times;600px image</figcaption>
 </figure>
 <figure>
 	<img src="3.png" width="300" height="300">
-	<figcaption>600&times;600px image, upsized from the 300&times;300px image (nearest-neighbor resampling)</figcaption>
+	<figcaption>3. 600&times;600px image (nearest-neighbor resampling)</figcaption>
 </figure>
 <figure>
 	<img src="4.png" width="300" height="300">
-	<figcaption>600&times;600px image, with aliasing</figcaption>
+	<figcaption>4. 600&times;600px image, aliased</figcaption>
 </figure>
 <figure>
 	<img src="5.png" width="300" height="300">
-	<figcaption>1200&times;1200px image, with aliasing</figcaption>
+	<figcaption>5. 1200&times;1200px image, aliased</figcaption>
 </figure>
+<aside>
+<h2>What am I testing here?</h2>
+<ul>
+	<li>Figure 1 shows a normal image in a web page. On a retina display, the edges would look blurry.</li>
+	<li>Figure 2 is two times bigger but rendered in 300&times;300px dimension, so it will look good on a retina display.</li>
+	<li>Figure 3 is upsized from Figure 1, with nearest-neighbour resampling. This is to emulate non-retina rendering on a retina display.</li>
+	<li>Figure 4 is the same as Figure 2 but aliased. I'm just wondering if anti-aliasing is still needed on a high pixel density display. Turns out the answer is yes.</li>
+	<li>Figure 5 is two times bigger, aliased. Slightly better but not great.</li>
+</ul>
+</aside>
