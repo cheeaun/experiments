@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<title>Retina test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{text-align: center; font-family: georgia, serif; padding: 0; margin: 2em 0;}
+figure{margin: 2em 0 0; display: inline-block; width: 300px; vertical-align: top;}
+figcaption{color: #666; font-size: 80%;}
+</style>
+<h1>Retina test</h1>
+<p>Load this page on a retina device such as iPhone 4, iPhone 4S or the new iPad.</p>
+<figure>
+	<img src="1.png" width="300" height="300">
+	<figcaption>300&times;300px image (the edges shoud look blurry)</figcaption>
+</figure>
+<figure>
+	<img src="2.png" width="300" height="300">
+	<figcaption>600&times;600px image (the ideal case)</figcaption>
+</figure>
+<figure>
+	<img src="3.png" width="300" height="300">
+	<figcaption>600&times;600px image, upsized from the 300&times;300px image (nearest-neighbor resampling)</figcaption>
+</figure>
+<figure>
+	<img src="4.png" width="300" height="300">
+	<figcaption>600&times;600px image, with aliasing</figcaption>
+</figure>
+<figure>
+	<img src="5.png" width="300" height="300">
+	<figcaption>1200&times;1200px image, with aliasing</figcaption>
+</figure>
