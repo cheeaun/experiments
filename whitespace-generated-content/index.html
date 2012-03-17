@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Whitespace and generated content</title>
+<style type="text/css" media="screen,projection">
+<!--
+/* DISTINGUISHABLE COLOURS */
+.testcase p{
+background-color: pink;
+color: inherit;
+}
+.testcase p[title]{
+background-color: yellow;
+color: inherit;
+}
+.testcase :after{
+background-color: lime;
+color: inherit;
+}
+
+/* GENERATED CONTENTS */
+#a[title]:after{
+content: attr(title);
+}
+
+#b:after{
+content: "some
+generated
+text";
+}
+
+#c:after{
+content: "some\
+generated\
+text";
+}
+
+#d:after{
+content: "some\A generated\A text";
+}
+
+#e:after{
+white-space: pre;
+content: "some\A generated\A text";
+}
+
+#f{
+white-space: pre;
+}
+#f:after{
+content: "some\A generated\A text";
+}
+
+#g:after{
+white-space: normal;
+content: "some\A generated\A text";
+}
+
+#h[title]:after{
+white-space: pre;
+content: attr(title);
+}
+-->
+</style>
+</head>
+<body>
+
+<h1>Whitespace and generated content</h1>
+
+<div class="testcase">
+
+<p id="a" title="some
+generated
+text">a) paragraph text</p>
+
+<p id="b">b) paragraph text</p>
+
+<p id="c">c) paragraph text</p>
+
+<p id="d">d) paragraph text</p>
+
+<p id="e">e) paragraph text</p>
+
+<p id="f">f) paragraph text</p>
+
+<p id="g">g) paragraph text</p>
+
+<p id="h" title="some
+generated
+text">h) paragraph text</p>
+
+</div>
+
+<p>Paragraphs with yellow backgrounds contain <code>title</code> attributes. Text with green backgrounds are generated using <code>content</code> property with pseudo-elements. Please view source for more details.</p>
+
+<p>Related article: <a href="/blog/2005/06/whitespace-and-generated-content">Whitespace and generated content</a></p>
+
+<hr />
+
+<p>Prepared by <a href="/about/">Lim Chee Aun</a>. Creation date: 2005-06-04. Last updated: 2005-06-05</p>
+
+</body>
+</html>

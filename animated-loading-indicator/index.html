@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<title>Animated loading indicator with CSS Transform and (stepped) Animation</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{ font-family: sans-serif; }
+
+/* Version 1*/
+#loader-1{
+	-webkit-animation: loading-rotation 1s linear infinite;
+	-moz-animation: loading-rotation 1s linear infinite;
+	animation: loading-rotation 1s linear infinite;
+}
+@-webkit-keyframes loading-rotation {
+	0% { -webkit-transform: rotate(0deg); }
+	8.32% { -webkit-transform: rotate(0deg); }
+	8.33% { -webkit-transform: rotate(30deg); }
+	16.66% { -webkit-transform: rotate(30deg); }
+	16.67% { -webkit-transform: rotate(60deg); }
+	24.99% { -webkit-transform: rotate(60deg); }
+	25% { -webkit-transform: rotate(90deg); }
+	33.32% { -webkit-transform: rotate(90deg); }
+	33.33% { -webkit-transform: rotate(120deg); }
+	41.66% { -webkit-transform: rotate(120deg); }
+	41.67% { -webkit-transform: rotate(150deg); }
+	49.99% { -webkit-transform: rotate(150deg); }
+	50% { -webkit-transform: rotate(180deg); }
+	58.32% { -webkit-transform: rotate(180deg); }
+	58.33% { -webkit-transform: rotate(210deg); }
+	66.66% { -webkit-transform: rotate(210deg); }
+	66.67% { -webkit-transform: rotate(240deg); }
+	74.99% { -webkit-transform: rotate(240deg); }
+	75% { -webkit-transform: rotate(270deg); }
+	83.32% { -webkit-transform: rotate(270deg); }
+	83.33% { -webkit-transform: rotate(300deg); }
+	91.66% { -webkit-transform: rotate(300deg); }
+	91.67% { -webkit-transform: rotate(330deg); }
+	99.99% { -webkit-transform: rotate(330deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes loading-rotation {
+	0% { -moz-transform: rotate(0deg); }
+	8.32% { -moz-transform: rotate(0deg); }
+	8.33% { -moz-transform: rotate(30deg); }
+	16.66% { -moz-transform: rotate(30deg); }
+	16.67% { -moz-transform: rotate(60deg); }
+	24.99% { -moz-transform: rotate(60deg); }
+	25% { -moz-transform: rotate(90deg); }
+	33.32% { -moz-transform: rotate(90deg); }
+	33.33% { -moz-transform: rotate(120deg); }
+	41.66% { -moz-transform: rotate(120deg); }
+	41.67% { -moz-transform: rotate(150deg); }
+	49.99% { -moz-transform: rotate(150deg); }
+	50% { -moz-transform: rotate(180deg); }
+	58.32% { -moz-transform: rotate(180deg); }
+	58.33% { -moz-transform: rotate(210deg); }
+	66.66% { -moz-transform: rotate(210deg); }
+	66.67% { -moz-transform: rotate(240deg); }
+	74.99% { -moz-transform: rotate(240deg); }
+	75% { -moz-transform: rotate(270deg); }
+	83.32% { -moz-transform: rotate(270deg); }
+	83.33% { -moz-transform: rotate(300deg); }
+	91.66% { -moz-transform: rotate(300deg); }
+	91.67% { -moz-transform: rotate(330deg); }
+	99.99% { -moz-transform: rotate(330deg); }
+	100% { -moz-transform: rotate(360deg); }
+}
+@keyframes loading-rotation {
+	0% { transform: rotate(0deg); }
+	8.32% { transform: rotate(0deg); }
+	8.33% { transform: rotate(30deg); }
+	16.66% { transform: rotate(30deg); }
+	16.67% { transform: rotate(60deg); }
+	24.99% { transform: rotate(60deg); }
+	25% { transform: rotate(90deg); }
+	33.32% { transform: rotate(90deg); }
+	33.33% { transform: rotate(120deg); }
+	41.66% { transform: rotate(120deg); }
+	41.67% { transform: rotate(150deg); }
+	49.99% { transform: rotate(150deg); }
+	50% { transform: rotate(180deg); }
+	58.32% { transform: rotate(180deg); }
+	58.33% { transform: rotate(210deg); }
+	66.66% { transform: rotate(210deg); }
+	66.67% { transform: rotate(240deg); }
+	74.99% { transform: rotate(240deg); }
+	75% { transform: rotate(270deg); }
+	83.32% { transform: rotate(270deg); }
+	83.33% { transform: rotate(300deg); }
+	91.66% { transform: rotate(300deg); }
+	91.67% { transform: rotate(330deg); }
+	99.99% { transform: rotate(330deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Version 2*/
+#loader-2{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: transparent url(loader-sprite.png) no-repeat;
+	-webkit-animation: loading-sprite 1s linear infinite;
+	-moz-animation: loading-sprite 1s linear infinite;
+	animation: loading-sprite 1s linear infinite;
+}
+@-webkit-keyframes loading-sprite {
+	0% { background-position: 0 0; }
+	8.32% { background-position: 0 0; }
+	8.33% { background-position: -16px 0; }
+	16.66% { background-position: -16px 0; }
+	16.67% { background-position: -32px 0; }
+	24.99% { background-position: -32px 0; }
+	25% { background-position: -48px 0; }
+	33.32% { background-position: -48px 0; }
+	33.33% { background-position: -64px 0; }
+	41.66% { background-position: -64px 0; }
+	41.67% { background-position: -80px 0; }
+	49.99% { background-position: -80px 0; }
+	50% { background-position: -96px 0; }
+	58.32% { background-position: -96px 0; }
+	58.33% { background-position: -112px 0; }
+	66.66% { background-position: -112px 0; }
+	66.67% { background-position: -128px 0; }
+	74.99% { background-position: -128px 0; }
+	75% { background-position: -144px 0; }
+	83.32% { background-position: -144px 0; }
+	83.33% { background-position: -160px 0; }
+	91.66% { background-position: -160px 0; }
+	91.67% { background-position: -176px 0; }
+	99.99% { background-position: -176px 0; }
+	100% { background-position: -192px 0; }
+}
+@-moz-keyframes loading-sprite {
+	0% { background-position: 0 0; }
+	8.32% { background-position: 0 0; }
+	8.33% { background-position: -16px 0; }
+	16.66% { background-position: -16px 0; }
+	16.67% { background-position: -32px 0; }
+	24.99% { background-position: -32px 0; }
+	25% { background-position: -48px 0; }
+	33.32% { background-position: -48px 0; }
+	33.33% { background-position: -64px 0; }
+	41.66% { background-position: -64px 0; }
+	41.67% { background-position: -80px 0; }
+	49.99% { background-position: -80px 0; }
+	50% { background-position: -96px 0; }
+	58.32% { background-position: -96px 0; }
+	58.33% { background-position: -112px 0; }
+	66.66% { background-position: -112px 0; }
+	66.67% { background-position: -128px 0; }
+	74.99% { background-position: -128px 0; }
+	75% { background-position: -144px 0; }
+	83.32% { background-position: -144px 0; }
+	83.33% { background-position: -160px 0; }
+	91.66% { background-position: -160px 0; }
+	91.67% { background-position: -176px 0; }
+	99.99% { background-position: -176px 0; }
+	100% { background-position: -192px 0; }
+}
+@keyframes loading-sprite {
+	0% { background-position: 0 0; }
+	8.32% { background-position: 0 0; }
+	8.33% { background-position: -16px 0; }
+	16.66% { background-position: -16px 0; }
+	16.67% { background-position: -32px 0; }
+	24.99% { background-position: -32px 0; }
+	25% { background-position: -48px 0; }
+	33.32% { background-position: -48px 0; }
+	33.33% { background-position: -64px 0; }
+	41.66% { background-position: -64px 0; }
+	41.67% { background-position: -80px 0; }
+	49.99% { background-position: -80px 0; }
+	50% { background-position: -96px 0; }
+	58.32% { background-position: -96px 0; }
+	58.33% { background-position: -112px 0; }
+	66.66% { background-position: -112px 0; }
+	66.67% { background-position: -128px 0; }
+	74.99% { background-position: -128px 0; }
+	75% { background-position: -144px 0; }
+	83.32% { background-position: -144px 0; }
+	83.33% { background-position: -160px 0; }
+	91.66% { background-position: -160px 0; }
+	91.67% { background-position: -176px 0; }
+	99.99% { background-position: -176px 0; }
+	100% { background-position: -192px 0; }
+}
+</style>
+<h1>Animated loading indicator with CSS Transform and (stepped) Animation</h1>
+<p>This is not an animated GIF, or APNG. Works on WebKit-based browsers and latest Firefox, for now. Probably hardware-accelerated. Works on iPhone Safari too.</p>
+<p>Version 1: <img src="loader.png" width="16" height="16" alt="" id="loader-1"></p>
+<p>Version 2: <span id="loader-2"></span></p>
+<p>Inspired by Paul Bakaus's <a href="http://paulbakaus.com/2010/12/15/sprite-animations-on-css-transitions-revisited/">Sprite Animations on CSS Transitions, revisited</a>. Alpha-transparent PNG <em>extracted</em> from Mozilla Labs' <a href="https://mozillalabs.com/blog/2007/08/better-animations-in-firefox-3/">Better animations in Firefox 3</a>.</p>
+<h2>Changelog</h2>
+<ul>
+	<li><time>2011-07-17</time>
+		<ul>
+			<li>Added <code>-moz-</code> prefix and non-vendor-prefixed code.</li>
+		</ul>
+	</li>
+	<li><time>2011-05-25</time>, Version 2
+		<ul>
+			<li>Better animation.</li>
+			<li>Fixed weird animation stops on Mobile Safari</li>
+			<li>Fixed animation not working on Safari, 0% and 100% are a must.</li>
+			<li>Bigger image file size.</li>
+		</ul>
+	</li>
+	<li><time>2011-05-24</time>, Version 1
+		<ul>
+			<li>Initial release.</li>
+			<li>Jagged-looking animation.</li>
+			<li>Animation sometimes stopped when scrolling on Mobile Safari.</li>
+		</ul>
+	</li>
+</ul>

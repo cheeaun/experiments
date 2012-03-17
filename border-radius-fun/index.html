@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<title>Border Radius Fun in Firefox 3.5</title>
+<style>
+div{
+	background: #ccc;
+	margin: 20px;
+	float: left;
+	width: auto;
+}
+#a{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+#b{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px / 10px;
+	-moz-border-radius: 20px / 10px;
+	-webkit-border-radius: 20px / 10px;
+}
+#c{
+	width: 40px;
+	height: 40px;
+	border: 10px solid #000;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+}
+#d{
+	width: 40px;
+	height: 40px;
+	border: solid #000;
+	border-width: 10px 5px 0;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+}
+#e{
+	width: 100px;
+	height: 40px;
+	border: solid #000;
+	border-width: 10px 0;
+	border-radius: 50px / 30px;
+	-moz-border-radius: 50px / 30px;
+	-webkit-border-radius: 50px / 30px;
+}
+#f{
+	width: 100px;
+	height: 40px;
+	border-style: double;
+	border-color: #000;
+	border-width: 10px 0;
+	border-radius: 50px / 30px;
+	-moz-border-radius: 50px / 30px;
+	-webkit-border-radius: 50px / 30px;
+}
+#g{
+	width: 100px;
+	height: 40px;
+	border-style: solid;
+	border-color: #000 blue; /* blue is useless here */
+	border-width: 10px 0;
+	border-radius: 50px / 30px;
+	-moz-border-radius: 50px / 30px;
+	-webkit-border-radius: 50px / 30px;
+}
+#h{
+	width: 100px;
+	height: 40px;
+	border-style: solid;
+	border-color: #000 #000 blue blue;
+	border-width: 10px 0;
+	border-radius: 50px / 30px;
+	-moz-border-radius: 50px / 30px;
+	-webkit-border-radius: 50px / 30px;
+}
+#i{
+	width: 100px;
+	height: 50px;
+	border-style: groove;
+	border-color: #000;
+	border-width: 20px 0;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+}
+</style>
+<h2>Border Radius Fun in Firefox 3.5</h2>
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>
+<div id="f"></div>
+<div id="g"></div>
+<div id="h"></div>
+<div id="i"></div>
